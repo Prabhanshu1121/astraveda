@@ -1,0 +1,131 @@
+ecommerce-app/
+├── .env.local                    # Environment variables
+├── next.config.js                # Next.js configuration
+├── package.json
+├── public/                       # Static files
+│   ├── images/                   # Product images, logos, etc.
+│   ├── favicon.ico
+│   └── ...
+├── src/
+│   ├── app/                      # App router directory (Next.js 13+)
+│   │   ├── (auth)/               # Auth related routes
+│   │   │   ├── login/
+│   │   │   │   └── page.jsx
+│   │   │   ├── register/
+│   │   │   │   └── page.jsx
+│   │   │   └── layout.jsx
+│   │   ├── (admin)/              # Admin panel routes
+│   │   │   ├── dashboard/
+│   │   │   │   └── page.jsx
+│   │   │   ├── products/
+│   │   │   │   ├── page.jsx
+│   │   │   │   ├── [id]/
+│   │   │   │   │   └── page.jsx
+│   │   │   │   └── new/
+│   │   │   │       └── page.jsx
+│   │   │   ├── categories/
+│   │   │   │   └── page.jsx
+│   │   │   ├── orders/
+│   │   │   │   └── page.jsx
+│   │   │   └── layout.jsx
+│   │   ├── (main)/               # Main site routes
+│   │   │   ├── layout.jsx        # Main layout
+│   │   │   ├── page.jsx          # Home page
+│   │   │   ├── products/
+│   │   │   │   ├── page.jsx      # Product listing
+│   │   │   │   ├── [category]/
+│   │   │   │   │   └── page.jsx  # Products by category
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.jsx  # Single product
+│   │   │   ├── cart/
+│   │   │   │   └── page.jsx
+│   │   │   ├── checkout/
+│   │   │   │   ├── page.jsx
+│   │   │   │   ├── payment/
+│   │   │   │   │   └── page.jsx
+│   │   │   │   └── success/
+│   │   │   │       └── page.jsx
+│   │   │   ├── account/
+│   │   │   │   ├── page.jsx
+│   │   │   │   ├── orders/
+│   │   │   │   │   └── page.jsx
+│   │   │   │   └── settings/
+│   │   │   │       └── page.jsx
+│   │   │   └── search/
+│   │   │       └── page.jsx
+│   │   ├── api/                  # API routes
+│   │   │   ├── auth/
+│   │   │   │   ├── route.js      # Handle login/register
+│   │   │   │   └── session.js    # Session management
+│   │   │   ├── products/
+│   │   │   │   ├── route.js      # CRUD operations
+│   │   │   │   └── search/
+│   │   │   │       └── route.js  # Search endpoint
+│   │   │   ├── cart/
+│   │   │   │   └── route.js      # Cart operations
+│   │   │   ├── orders/
+│   │   │   │   └── route.js      # Order processing
+│   │   │   └── payment/
+│   │   │       └── route.js      # Payment processing
+│   │   ├── layout.jsx            # Root layout
+│   │   └── not-found.jsx         # 404 page
+│   ├── components/               # Reusable components
+│   │   ├── ui/                   # UI components
+│   │   │   ├── button.jsx
+│   │   │   ├── card.jsx
+│   │   │   ├── input.jsx
+│   │   │   └── ...
+│   │   ├── layout/
+│   │   │   ├── header.jsx
+│   │   │   ├── footer.jsx
+│   │   │   ├── navbar.jsx
+│   │   │   └── sidebar.jsx
+│   │   ├── auth/
+│   │   │   ├── login-form.jsx
+│   │   │   └── register-form.jsx
+│   │   ├── products/
+│   │   │   ├── product-card.jsx
+│   │   │   ├── product-grid.jsx
+│   │   │   └── product-details.jsx
+│   │   ├── cart/
+│   │   │   ├── cart-item.jsx
+│   │   │   └── cart-summary.jsx
+│   │   ├── checkout/
+│   │   │   ├── address-form.jsx
+│   │   │   ├── payment-methods.jsx
+│   │   │   └── order-summary.jsx
+│   │   └── admin/
+│   │       ├── admin-nav.jsx
+│   │       ├── product-form.jsx
+│   │       └── data-table.jsx
+│   ├── contexts/                 # React contexts
+│   │   ├── auth-context.jsx      # Authentication context
+│   │   ├── cart-context.jsx      # Shopping cart context
+│   │   └── theme-context.jsx     # Theme context
+│   ├── hooks/                    # Custom hooks
+│   │   ├── use-auth.js
+│   │   ├── use-cart.js
+│   │   └── use-products.js
+│   ├── lib/                      # Utility functions
+│   │   ├── auth.js               # Auth utilities
+│   │   ├── db.js                 # Database connection
+│   │   ├── api.js                # API helpers
+│   │   └── utils.js              # General utilities
+│   ├── models/                   # Data models
+│   │   ├── User.js               # User model
+│   │   ├── Product.js            # Product model
+│   │   ├── Category.js           # Category model
+│   │   ├── Cart.js               # Cart model
+│   │   ├── Order.js              # Order model
+│   │   └── Payment.js            # Payment model
+│   ├── styles/                   # Global styles
+│   │   ├── globals.css
+│   │   ├── theme.css
+│   │   └── ...
+│   └── types/                    # TypeScript types
+│       ├── user.ts
+│       ├── product.ts
+│       ├── cart.ts
+│       └── ...
+├── middleware.js                 # Authentication middleware
+└── README.md
